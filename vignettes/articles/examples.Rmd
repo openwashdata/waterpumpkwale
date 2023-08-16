@@ -11,4 +11,16 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(waterpumpkwale)
+library(sf)
+library(leaflet)
+```
+
+```{r}
+leaflet(location, options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
+  addProviderTiles("OpenStreetMap") |>
+  addMarkers(
+    lng = ~`Long (WGS84)`,
+    lat = ~`Lat (WGS84)`,
+    popup = ~PumpID
+  )
 ```
