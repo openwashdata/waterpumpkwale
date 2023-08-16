@@ -1,0 +1,14 @@
+#' Location information of the water pumps
+#'
+#' @format A tibble with 299 rows and 6 variables
+#'
+#' \describe{
+#'   \item{PumpID}{ID number of the water pump}
+#'   \item{Name/Description}{Name of the pump location}
+#'   \item{X (Arc 1960)}{Longitude in Arc 1960 coordinate system}
+#'   \item{Y (Arc 1960)}{Latitude in Arc 1960 coordinate system}
+#'   \item{Lat (WGS84)}{Latitude in WGS 84 coordinate system}
+#'   \item{Long (WGS84)}{Longitude in WGS 84 coordinate system}
+#' }
+
+"location"
