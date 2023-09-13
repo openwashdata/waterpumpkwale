@@ -32,23 +32,13 @@ devtools::install_github("openwashdata/waterpumpkwale")
 Alternatively, you can download the individual datasets as CSV or XLSX
 file from the table below.
 
-\| dataset \| CSV \| XLSX \|
-\|:——–\|:—————————————————————————————————–\|:——————————————————————————————————-\|
-\| location \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx)
-\| \| weeklyvol2014 \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx)
-\| \| weeklyvol2015 \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx)
-\|
+| dataset       | CSV                                                                                                    | XLSX                                                                                                     |
+|---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| location      | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv)      | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx)      |
+| weeklyvol2014 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx) |
+| weeklyvol2015 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx) |
 
-## Introduction
+# Introduction
 
 This dataset contains a summary of the weekly volumetric output of pumps
 monitored using Smart Handpump sensors for 2014 and 2015.[^1][^2]
@@ -84,9 +74,7 @@ The package provides access to three datasets `location`,
 library(waterpumpkwale)
 ```
 
-``` epoxy
-The `waterpumpkwale` data set has {ncol(waterpumpkwale)} variables and {nrow(waterpumpkwale)} observations. For an overview of the variable names, see the following table.  
-```
+    The `waterpumpkwale` data set has {ncol(waterpumpkwale)} variables and {nrow(waterpumpkwale)} observations. For an overview of the variable names, see the following table.  
 
 ``` r
 waterpumpkwale
@@ -100,18 +88,69 @@ waterpumpkwale
     #> ℹ Use `spec()` to retrieve the full column specification for this data.
     #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 
-| variable_name    | variable_type | description                             |
-|:-----------------|:--------------|:----------------------------------------|
-| PumpID           | character     | ID number of the water pump             |
-| Name/Description | character     | Name of the pump location               |
-| X (Arc 1960)     | double        | Longitude in Arc 1960 coordinate system |
-| Y (Arc 1960)     | double        | Latitude in Arc 1960 coordinate system  |
-| Lat (WGS84)      | double        | Latitude in WGS 84 coordinate system    |
-| Long (WGS84)     | double        | Longitude in WGS 84 coordinate system   |
+| variable_name | variable_type | description                             |
+|:--------------|:--------------|:----------------------------------------|
+| pumpid        | character     | ID number of the water pump             |
+| description   | character     | Name of the pump location               |
+| x_arc1960     | double        | Longitude in Arc 1960 coordinate system |
+| y_rc1960      | double        | Latitude in Arc 1960 coordinate system  |
+| lat_wgs84     | double        | Latitude in WGS 84 coordinate system    |
+| long_wgs84    | double        | Longitude in WGS 84 coordinate system   |
 
 ## Example
 
+``` r
+library(leaflet)
+# customize marker icon 
+handpumpicon <- makeIcon(
+  iconUrl = "https://cdn-icons-png.flaticon.com/512/5984/5984318.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+
+leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
+  addProviderTiles("OpenStreetMap") |>
+  addMarkers(
+    data = location,
+    lng = ~`long_wgs84`,
+    lat = ~`lat_wgs84`,
+    popup = ~pumpid,
+    label = ~`description`,
+    icon = handpumpicon
+  ) 
+  
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/waterpumpkwale/blob/main/LICENSE.md).
+
 ## Citation
+
+``` r
+citation()
+#> To cite R in publications use:
+#> 
+#>   R Core Team (2023). _R: A Language and Environment for Statistical
+#>   Computing_. R Foundation for Statistical Computing, Vienna, Austria.
+#>   <https://www.R-project.org/>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {R: A Language and Environment for Statistical Computing},
+#>     author = {{R Core Team}},
+#>     organization = {R Foundation for Statistical Computing},
+#>     address = {Vienna, Austria},
+#>     year = {2023},
+#>     url = {https://www.R-project.org/},
+#>   }
+#> 
+#> We have invested a lot of time and effort in creating R, please cite it
+#> when using it for data analysis. See also 'citation("pkgname")' for
+#> citing R packages.
+```
 
 [^1]: Grants that permitted the data collection include: Groundwater
     Risk Management for Growth and Development project (NE/M008894/1)

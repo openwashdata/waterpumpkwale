@@ -47,23 +47,13 @@ devtools::install_github("openwashdata/waterpumpkwale")
 Alternatively, you can download the individual datasets as CSV or XLSX
 file from the table below.
 
-\| dataset \| CSV \| XLSX \|
-\|:--------\|:-----------------------------------------------------------------------------------------------------\|:-------------------------------------------------------------------------------------------------------\|
-\| location \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx)
-\| \| weeklyvol2014 \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx)
-\| \| weeklyvol2015 \| [Download
-CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv)
-\| [Download
-XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx)
-\|
+| dataset       | CSV                                                                                                    | XLSX                                                                                                     |
+|--------------|-----------------------------|-----------------------------|
+| location      | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv)      | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx)      |
+| weeklyvol2014 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx) |
+| weeklyvol2015 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx) |
 
-## Introduction
+# Introduction
 
 This dataset contains a summary of the weekly volumetric output of pumps
 monitored using Smart Handpump sensors for 2014 and 2015.[^1][^2]
@@ -110,7 +100,7 @@ The package provides access to three datasets `location`,
 library(waterpumpkwale)
 ```
 
-```{epoxy}
+```
 The `waterpumpkwale` data set has {ncol(waterpumpkwale)} variables and {nrow(waterpumpkwale)} observations. For an overview of the variable names, see the following table.  
 ```
 
@@ -127,4 +117,33 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ## Example
 
+```{r eval=FALSE}
+library(leaflet)
+# customize marker icon 
+handpumpicon <- makeIcon(
+  iconUrl = "https://cdn-icons-png.flaticon.com/512/5984/5984318.png",
+  iconWidth = 30, iconHeight = 30
+)
+
+
+leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
+  addProviderTiles("OpenStreetMap") |>
+  addMarkers(
+    data = location,
+    lng = ~`long_wgs84`,
+    lat = ~`lat_wgs84`,
+    popup = ~pumpid,
+    label = ~`description`,
+    icon = handpumpicon
+  ) 
+  
+
+```
+## License 
+Data are available as [CC-BY](https://github.com/openwashdata/waterpumpkwale/blob/main/LICENSE.md).
+
 ## Citation
+```{r}
+citation()
+```
+

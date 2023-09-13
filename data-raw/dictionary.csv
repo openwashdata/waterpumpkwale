@@ -1,11 +1,11 @@
 directory,file_name,variable_name,variable_type,description
-data/,weeklyvol2014.rda,PumpID,character,ID number of the water pump
+data/,weeklyvol2014.rda,pumpid,character,ID number of the water pump
 data/,weeklyvol2014.rda,n,double,"Each column indicates the week number 1, 2, 3, ..., 52"
-data/,weeklyvol2015.rda,PumpID,character,ID number of the water pump
+data/,weeklyvol2015.rda,pumpid,character,ID number of the water pump
 data/,weeklyvol2015.rda,n,double,"Each column indicates the week number 1, 2, 3, ..., 52"
-data/,location.rda,PumpID,character,ID number of the water pump
-data/,location.rda,Name/Description,character,Name of the pump location
-data/,location.rda,X (Arc 1960),double,Longitude in Arc 1960 coordinate system
-data/,location.rda,Y (Arc 1960),double,Latitude in Arc 1960 coordinate system
-data/,location.rda,Lat (WGS84),double,Latitude in WGS 84 coordinate system
-data/,location.rda,Long (WGS84),double,Longitude in WGS 84 coordinate system
+data/,location.rda,pumpid,character,ID number of the water pump
+data/,location.rda,description,character,Name of the pump location
+data/,location.rda,x_arc1960,double,Longitude in Arc 1960 coordinate system
+data/,location.rda,y_rc1960,double,Latitude in Arc 1960 coordinate system
+data/,location.rda,lat_wgs84,double,Latitude in WGS 84 coordinate system
+data/,location.rda,long_wgs84,double,Longitude in WGS 84 coordinate system
