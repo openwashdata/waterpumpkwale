@@ -38,10 +38,11 @@ file from the table below.
 | weeklyvol2014 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx) |
 | weeklyvol2015 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx) |
 
-# Introduction
+## Introduction
 
 This dataset contains a summary of the weekly volumetric output of pumps
-monitored using Smart Handpump sensors for 2014 and 2015.[^1][^2]
+monitored using Smart Handpump sensors for 2014 and 2015 in Kwale,
+Kenya.[^1][^2]
 
 Notes:
 
@@ -50,20 +51,6 @@ Notes:
 2.  The dataset has gaps due to variable signal, and some attrition due
     to damage and vandalism.
 3.  Not all pumps in the study area were under monitoring.
-
-### References
-
-\[1\] P. Thomson, R. Hope, and T. Foster, “GSM-enabled remote monitoring
-of rural handpumps: a proof-of-concept study,” Journal of
-Hydroinformatics, vol. 14, no. 4, pp. 829–839, 05 2012. \[Online\].
-Available: <https://doi.org/10.2166/hydro.2012.183>
-
-\[2\] Behar, J., Guazzi, A., Jorge, J., Laranjeira, S., Maraci, M.A.,
-Papastylianou, T., Thomson, P., Clifford, G.D. and Hope, R.A., 2013.
-Software architecture to monitor handpump performance in rural Kenya. In
-Proceedings of the 12th International Conference on Social Implications
-of Computers in Developing Countries, Ochos Rios, Jamaica. pp. 978 (Vol.
-991).
 
 ## Data
 
@@ -74,11 +61,11 @@ The package provides access to three datasets `location`,
 library(waterpumpkwale)
 ```
 
-    The `waterpumpkwale` data set has {ncol(waterpumpkwale)} variables and {nrow(waterpumpkwale)} observations. For an overview of the variable names, see the following table.  
+### `location` data
 
-``` r
-waterpumpkwale
-```
+The `location` data set has 6 variables and 299 observations. They
+record 299 hand pumps location information. For an overview of the
+variable names, see the following table.
 
     #> Rows: 10 Columns: 5
     #> ── Column specification ────────────────────────────────────────────────────────
@@ -97,7 +84,28 @@ waterpumpkwale
 | lat_wgs84     | double        | Latitude in WGS 84 coordinate system    |
 | long_wgs84    | double        | Longitude in WGS 84 coordinate system   |
 
+### `weeklyvol2014` and `weeklyvol2015` data
+
+The two datasets follows the same structure and we here use
+`weeklyvol2014` as an illustration.
+
+    #> Rows: 10 Columns: 5
+    #> ── Column specification ────────────────────────────────────────────────────────
+    #> Delimiter: ","
+    #> chr (5): directory, file_name, variable_name, variable_type, description
+    #> 
+    #> ℹ Use `spec()` to retrieve the full column specification for this data.
+    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+| variable_name | variable_type | description                                          |
+|:--------------|:--------------|:-----------------------------------------------------|
+| pumpid        | character     | ID number of the water pump                          |
+| n             | double        | Each column indicates the week number 1, 2, 3, …, 52 |
+
 ## Example
+
+We can have a look where the hand pumps locate in Kwale using the
+dataset `location`.
 
 ``` r
 library(leaflet)
@@ -107,7 +115,7 @@ handpumpicon <- makeIcon(
   iconWidth = 30, iconHeight = 30
 )
 
-
+# Display an interactive map
 leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
   addProviderTiles("OpenStreetMap") |>
   addMarkers(
@@ -117,9 +125,14 @@ leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
     popup = ~pumpid,
     label = ~`description`,
     icon = handpumpicon
-  ) 
-  
+)
 ```
+
+<figure>
+<img src="man/figures/README-location.png"
+alt="hand pump location map" />
+<figcaption aria-hidden="true">hand pump location map</figcaption>
+</figure>
 
 ## License
 
@@ -129,6 +142,7 @@ Data are available as
 ## Citation
 
 ``` r
+#TODO: add citation
 citation()
 #> To cite R in publications use:
 #> 
@@ -151,6 +165,20 @@ citation()
 #> when using it for data analysis. See also 'citation("pkgname")' for
 #> citing R packages.
 ```
+
+### Related References
+
+\[1\] P. Thomson, R. Hope, and T. Foster, “GSM-enabled remote monitoring
+of rural handpumps: a proof-of-concept study,” Journal of
+Hydroinformatics, vol. 14, no. 4, pp. 829–839, 05 2012. \[Online\].
+Available: <https://doi.org/10.2166/hydro.2012.183>
+
+\[2\] Behar, J., Guazzi, A., Jorge, J., Laranjeira, S., Maraci, M.A.,
+Papastylianou, T., Thomson, P., Clifford, G.D. and Hope, R.A., 2013.
+Software architecture to monitor handpump performance in rural Kenya. In
+Proceedings of the 12th International Conference on Social Implications
+of Computers in Developing Countries, Ochos Rios, Jamaica. pp. 978 (Vol.
+991).
 
 [^1]: Grants that permitted the data collection include: Groundwater
     Risk Management for Growth and Development project (NE/M008894/1)
