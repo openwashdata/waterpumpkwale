@@ -56,7 +56,8 @@ file from the table below.
 ## Introduction
 
 This dataset contains a summary of the weekly volumetric output of pumps
-monitored using Smart Handpump sensors for 2014 and 2015 in Kwale, Kenya.[^1][^2]
+monitored using Smart Handpump sensors for 2014 and 2015 in Kwale,
+Kenya.[^1][^2]
 
 [^1]: Grants that permitted the data collection include: Groundwater
     Risk Management for Growth and Development project (NE/M008894/1)
@@ -67,6 +68,7 @@ monitored using Smart Handpump sensors for 2014 and 2015 in Kwale, Kenya.[^1][^2
     programme.
 
 [^2]: More information of the data sources:
+    <https://metadata.bgs.ac.uk/geonetwork/srv/eng/catalog.search#/metadata/9ed6c5d2-124b-50ed-e054-002128a47908>,
     <https://webapps.bgs.ac.uk/services/ngdc/accessions/index.html?simpleText=upgro>
 
 Notes:
@@ -77,7 +79,6 @@ Notes:
     to damage and vandalism.
 3.  Not all pumps in the study area were under monitoring.
 
-
 ## Data
 
 The package provides access to three datasets `location`,
@@ -86,14 +87,14 @@ The package provides access to three datasets `location`,
 ```{r}
 library(waterpumpkwale)
 ```
+
 ### `location` data
 
-The `location` data set has 6 variables and 299 observations. 
-They record 299 hand pumps location information.
-For an overview of the variable names, see the following table.  
+The `location` data set has 6 variables and 299 observations. They
+record 299 hand pumps location information. For an overview of the
+variable names, see the following table.
 
-
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>
   dplyr::filter(file_name == "location.rda") |>
   dplyr::select(variable_name:description) |> 
@@ -101,8 +102,15 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```
 
 ### `weeklyvol2014` and `weeklyvol2015` data
-The two datasets follows the same structure and we here use `weeklyvol2014` as an illustration.
-```{r echo=FALSE}
+
+The `weeklyvol2014` data set has 53 variables and 324 observations. The
+`weeklyvol2015` data set has 53 variables and 297 observations.
+
+These two datasets follow the same structure and we here use
+`weeklyvol2014` as an illustration. For an overview of the variable
+names, see the following table.
+
+```{r echo=FALSE, message=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>
   dplyr::filter(file_name == "weeklyvol2014.rda") |>
   dplyr::select(variable_name:description) |> 
@@ -112,7 +120,8 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ## Example
 
 We can have a look where the hand pumps locate in Kwale using the
-dataset `location`.
+dataset `location`. For more data exploration, you may check out [a
+detailed example here]().
 
 ```{r eval=FALSE}
 library(leaflet)
@@ -135,7 +144,7 @@ leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
 )
 ```
 
-![hand pump location map](man/figures/README-location.png)
+![Screenshot of hand pump location map](man/figures/README-location.png)
 
 ## License
 
@@ -144,9 +153,11 @@ Data are available as
 
 ## Citation
 
+If you use the data or the package, consider to cite this package with
+the following information to give credits for authors of the dataset!
+
 ```{r}
-#TODO: add citation
-citation()
+citation("waterpumpkwale")
 ```
 
 ### Related References

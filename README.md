@@ -67,14 +67,6 @@ The `location` data set has 6 variables and 299 observations. They
 record 299 hand pumps location information. For an overview of the
 variable names, see the following table.
 
-    #> Rows: 10 Columns: 5
-    #> ── Column specification ────────────────────────────────────────────────────────
-    #> Delimiter: ","
-    #> chr (5): directory, file_name, variable_name, variable_type, description
-    #> 
-    #> ℹ Use `spec()` to retrieve the full column specification for this data.
-    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
 | variable_name | variable_type | description                             |
 |:--------------|:--------------|:----------------------------------------|
 | pumpid        | character     | ID number of the water pump             |
@@ -86,16 +78,12 @@ variable names, see the following table.
 
 ### `weeklyvol2014` and `weeklyvol2015` data
 
-The two datasets follows the same structure and we here use
-`weeklyvol2014` as an illustration.
+The `weeklyvol2014` data set has 53 variables and 324 observations. The
+`weeklyvol2015` data set has 53 variables and 297 observations.
 
-    #> Rows: 10 Columns: 5
-    #> ── Column specification ────────────────────────────────────────────────────────
-    #> Delimiter: ","
-    #> chr (5): directory, file_name, variable_name, variable_type, description
-    #> 
-    #> ℹ Use `spec()` to retrieve the full column specification for this data.
-    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+These two datasets follow the same structure and we here use
+`weeklyvol2014` as an illustration. For an overview of the variable
+names, see the following table.
 
 | variable_name | variable_type | description                                          |
 |:--------------|:--------------|:-----------------------------------------------------|
@@ -105,7 +93,8 @@ The two datasets follows the same structure and we here use
 ## Example
 
 We can have a look where the hand pumps locate in Kwale using the
-dataset `location`.
+dataset `location`. For more data exploration, you may check out [a
+detailed example here]().
 
 ``` r
 library(leaflet)
@@ -130,8 +119,9 @@ leaflet(options = leafletOptions(crs = leafletCRS(proj4def = "WGS84"))) |>
 
 <figure>
 <img src="man/figures/README-location.png"
-alt="hand pump location map" />
-<figcaption aria-hidden="true">hand pump location map</figcaption>
+alt="Screenshot of hand pump location map" />
+<figcaption aria-hidden="true">Screenshot of hand pump location
+map</figcaption>
 </figure>
 
 ## License
@@ -141,29 +131,26 @@ Data are available as
 
 ## Citation
 
+If you use the data or the package, consider to cite this package with
+the following information to give credits for authors of the dataset!
+
 ``` r
-#TODO: add citation
-citation()
-#> To cite R in publications use:
+citation("waterpumpkwale")
+#> Warning in citation("waterpumpkwale"): could not determine year for
+#> 'waterpumpkwale' from package DESCRIPTION file
+#> To cite package 'waterpumpkwale' in publications use:
 #> 
-#>   R Core Team (2023). _R: A Language and Environment for Statistical
-#>   Computing_. R Foundation for Statistical Computing, Vienna, Austria.
-#>   <https://www.R-project.org/>.
+#>   Thomson P, Hope R, Foster T, Zhong M (????). _waterpumpkwale: Weekly
+#>   volume of water pumped for handpumps monitored with Smart Handpump
+#>   technology, Kwale County, Kenya_. R package version 0.0.0.9000.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
-#>     title = {R: A Language and Environment for Statistical Computing},
-#>     author = {{R Core Team}},
-#>     organization = {R Foundation for Statistical Computing},
-#>     address = {Vienna, Austria},
-#>     year = {2023},
-#>     url = {https://www.R-project.org/},
+#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya},
+#>     author = {Patrick Thomson and Rob Hope and Tim Foster and Mian Zhong},
+#>     note = {R package version 0.0.0.9000},
 #>   }
-#> 
-#> We have invested a lot of time and effort in creating R, please cite it
-#> when using it for data analysis. See also 'citation("pkgname")' for
-#> citing R packages.
 ```
 
 ### Related References
@@ -189,4 +176,5 @@ of Computers in Developing Countries, Ochos Rios, Jamaica. pp. 978 (Vol.
     programme.
 
 [^2]: More information of the data sources:
+    <https://metadata.bgs.ac.uk/geonetwork/srv/eng/catalog.search#/metadata/9ed6c5d2-124b-50ed-e054-002128a47908>,
     <https://webapps.bgs.ac.uk/services/ngdc/accessions/index.html?simpleText=upgro>
