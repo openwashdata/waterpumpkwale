@@ -1,10 +1,17 @@
 Package: waterpumpkwale
 Title: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
+    person("Patrick", "Thomson", , "", role = c("aut"),
+           comment = c(ORCID = "")),
+    person("Rob", "Hope", , "", role = c("aut"),
+           comment = c(ORCID = "")),
+    person("Tim", "Foster", , "", role = c("aut"),
+           comment = c(ORCID = "")),
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0009-4546-7214"))
-Description: What the package does (one paragraph).
+           )
+Description: A dataset contains a summary of the weekly volumetric output of pumps monitored using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -13,3 +20,4 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Config/Needs/website: rmarkdown
+VignetteBuilder: knitr
