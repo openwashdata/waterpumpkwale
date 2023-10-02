@@ -7,7 +7,7 @@
 
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
+[![R-CMD-check](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `waterpumpkwale` is to provide datasets for monitoring
@@ -136,20 +136,20 @@ the following information to give credits for authors of the dataset!
 
 ``` r
 citation("waterpumpkwale")
-#> Warning in citation("waterpumpkwale"): could not determine year for
-#> 'waterpumpkwale' from package DESCRIPTION file
 #> To cite package 'waterpumpkwale' in publications use:
 #> 
-#>   Thomson P, Hope R, Foster T, Zhong M (????). _waterpumpkwale: Weekly
+#>   Thomson P, Hope R, Foster T, Zhong M (2023). _waterpumpkwale: Weekly
 #>   volume of water pumped for handpumps monitored with Smart Handpump
-#>   technology, Kwale County, Kenya_. R package version 0.0.0.9000.
+#>   technology, Kwale County, Kenya_. R package version 0.0.1.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
-#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya},
+#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump
+#> technology, Kwale County, Kenya},
 #>     author = {Patrick Thomson and Rob Hope and Tim Foster and Mian Zhong},
-#>     note = {R package version 0.0.0.9000},
+#>     year = {2023},
+#>     note = {R package version 0.0.1},
 #>   }
 ```
 

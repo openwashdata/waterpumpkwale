@@ -1,6 +1,7 @@
 Package: waterpumpkwale
-Title: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya
-Version: 0.0.0.9000
+Title: Weekly volume of water pumped for handpumps monitored with Smart Handpump 
+    technology, Kwale County, Kenya
+Version: 0.0.1
 Authors@R: c(
     person("Patrick", "Thomson", , "", role = c("aut"),
            comment = c(ORCID = "")),
@@ -21,3 +22,4 @@ Depends:
 LazyData: true
 Config/Needs/website: rmarkdown
 VignetteBuilder: knitr
+Date: 2023-10-02

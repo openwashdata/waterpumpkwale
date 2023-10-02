@@ -9,7 +9,7 @@ type: software
 license: CC-BY-4.0
 title: 'waterpumpkwale: Weekly volume of water pumped for handpumps monitored with
   Smart Handpump technology, Kwale County, Kenya'
-version: 0.0.0.9000
+version: 0.0.1
 abstract: A dataset contains a summary of the weekly volumetric output of pumps monitored
   using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.
 authors:
@@ -23,6 +23,7 @@ authors:
   given-names: Mian
   email: mzhong@ethz.ch
   orcid: https://orcid.org/0009-0009-4546-7214
+date-released: '2023-10-02'
 contact:
 - family-names: Zhong
   given-names: Mian
