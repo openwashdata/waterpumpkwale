@@ -8,6 +8,7 @@
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R-CMD-check](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/679250421.svg)](https://zenodo.org/badge/latestdoi/679250421)
 <!-- badges: end -->
 
 The goal of `waterpumpkwale` is to provide datasets for monitoring

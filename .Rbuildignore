@@ -2,3 +2,10 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^data-raw$
+^README\.Rmd$
+^vignettes/articles$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^CITATION\.cff$
+^\.github$
