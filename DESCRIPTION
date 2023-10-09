@@ -21,5 +21,4 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Config/Needs/website: rmarkdown
-VignetteBuilder: knitr
 Date: 2023-10-02
