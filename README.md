@@ -139,18 +139,20 @@ the following information to give credits for authors of the dataset!
 citation("waterpumpkwale")
 #> To cite package 'waterpumpkwale' in publications use:
 #> 
-#>   Thomson P, Hope R, Foster T, Zhong M (2023). _waterpumpkwale: Weekly
+#>   Thomson P, Hope R, Foster T, Zhong M (2023). "waterpumpkwale: Weekly
 #>   volume of water pumped for handpumps monitored with Smart Handpump
-#>   technology, Kwale County, Kenya_. R package version 0.0.1.
+#>   technology, Kwale County, Kenya." doi:10.5281/zenodo.8399887
+#>   <https://doi.org/10.5281/zenodo.8399887>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Manual{,
-#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump
-#> technology, Kwale County, Kenya},
+#>   @Misc{thomson_etall:2023,
+#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya},
 #>     author = {Patrick Thomson and Rob Hope and Tim Foster and Mian Zhong},
 #>     year = {2023},
-#>     note = {R package version 0.0.1},
+#>     doi = {10.5281/zenodo.8399887},
+#>     abstract = {A dataset contains a summary of the weekly volumetric output of pumps monitored using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.},
+#>     version = {0.0.1},
 #>   }
 ```
 

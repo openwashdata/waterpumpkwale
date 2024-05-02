@@ -1,0 +1,18 @@
+
+bibentry(bibtype = "Misc",
+         key = "thomson_etall:2023",
+         title = "waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya",
+         author = c(person(given = "Patrick",
+                           family = "Thomson"),
+                    person(given = "Rob",
+                           family = "Hope"),
+                    person(given = "Tim",
+                           family = "Foster"),
+                    person(given = "Mian",
+                           family = "Zhong",
+                           email = "mzhong@ethz.ch",
+                           comment = c(ORCID = "0009-0009-4546-7214"))),
+         year = "2023",
+         doi = "10.5281/zenodo.8399887",
+         abstract = "A dataset contains a summary of the weekly volumetric output of pumps monitored using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.",
+         version = "0.0.1")
