@@ -1,6 +1,5 @@
 Package: waterpumpkwale
-Title: Weekly volume of water pumped for handpumps monitored with Smart Handpump 
-    technology, Kwale County, Kenya
+Title: Weekly Handpump Water Volumes, Kwale County, Kenya 2014-2015
 Version: 0.0.1
 Authors@R: c(
     person("Patrick", "Thomson", , "", role = c("aut"),
@@ -14,13 +13,19 @@ Authors@R: c(
     person("Lars", "Schöbitz", , "lschoebitz@ethz.ch", role = "cre",
            comment = c(ORCID = "0000-0003-2196-5015"))
            )
-Description: A dataset contains a summary of the weekly volumetric output of pumps monitored using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.
+Description: This dataset contains a summary of the weekly volumetric output of handpumps monitored using Smart Handpump sensors in 2014 and 2015 in Kwale County, Kenya, together with the locations of the monitored pumps.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
 Depends: 
     R (>= 2.10)
 LazyData: true
 Config/Needs/website: rmarkdown
 Date: 2023-10-02
+URL: https://github.com/openwashdata/waterpumpkwale
+BugReports: https://github.com/openwashdata/waterpumpkwale/issues
+Language: en-GB
+X-schema.org-keywords: open data, washdata, handpumps, water supply, groundwater, smart handpump, kwale, kenya
+X-schema.org-spatialCoverage: Kwale County, Kenya
+X-schema.org-temporalCoverage: 2014-01-01/2015-12-31
+Config/roxygen2/version: 8.0.0
