@@ -15,7 +15,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%",
+  screenshot.force = FALSE
 )
 ```
 
@@ -26,7 +27,7 @@ knitr::opts_chunk$set(
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R-CMD-check](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml)
-[![DOI](https://zenodo.org/badge/679250421.svg)](https://zenodo.org/badge/latestdoi/679250421)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8399886.svg)](https://zenodo.org/doi/10.5281/zenodo.8399886)
 <!-- badges: end -->
 
 The goal of `waterpumpkwale` is to provide datasets for monitoring
@@ -41,7 +42,7 @@ poverty.
 ## Installation
 
 You can install the development version of waterpumpkwale from
-[GitHub](https://github.com/waterpumpkwale) with:
+[GitHub](https://github.com/openwashdata/waterpumpkwale) with:
 
 ``` r
 # install.packages("devtools")
@@ -125,7 +126,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 We can have a look where the hand pumps locate in Kwale using the
 dataset `location`. For more data exploration, you may check out [a
-detailed example here]().
+detailed example here](https://openwashdata.github.io/waterpumpkwale/articles/examples.html).
 
 ```{r eval=FALSE}
 library(leaflet)

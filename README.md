@@ -8,7 +8,7 @@
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R-CMD-check](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpumpkwale/actions/workflows/R-CMD-check.yaml)
-[![DOI](https://zenodo.org/badge/679250421.svg)](https://zenodo.org/badge/latestdoi/679250421)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8399886.svg)](https://zenodo.org/doi/10.5281/zenodo.8399886)
 <!-- badges: end -->
 
 The goal of `waterpumpkwale` is to provide datasets for monitoring
@@ -23,7 +23,7 @@ poverty.
 ## Installation
 
 You can install the development version of waterpumpkwale from
-[GitHub](https://github.com/waterpumpkwale) with:
+[GitHub](https://github.com/openwashdata/waterpumpkwale) with:
 
 ``` r
 # install.packages("devtools")
@@ -33,9 +33,9 @@ devtools::install_github("openwashdata/waterpumpkwale")
 Alternatively, you can download the individual datasets as CSV or XLSX
 file from the table below.
 
-| dataset       | CSV                                                                                                    | XLSX                                                                                                     |
-|---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| location      | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv)      | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx)      |
+| dataset | CSV | XLSX |
+|----|----|----|
+| location | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/location.xlsx) |
 | weeklyvol2014 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2014.xlsx) |
 | weeklyvol2015 | [Download CSV](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.csv) | [Download XLSX](https://github.com/openwashdata/waterpumpkwale/raw/main/inst/extdata/weeklyvol2015.xlsx) |
 
@@ -68,14 +68,14 @@ The `location` data set has 6 variables and 299 observations. They
 record 299 hand pumps location information. For an overview of the
 variable names, see the following table.
 
-| variable_name | variable_type | description                             |
-|:--------------|:--------------|:----------------------------------------|
-| pumpid        | character     | ID number of the water pump             |
-| description   | character     | Name of the pump location               |
-| x_arc1960     | double        | Longitude in Arc 1960 coordinate system |
-| y_rc1960      | double        | Latitude in Arc 1960 coordinate system  |
-| lat_wgs84     | double        | Latitude in WGS 84 coordinate system    |
-| long_wgs84    | double        | Longitude in WGS 84 coordinate system   |
+| variable_name | variable_type | description                                 |
+|:--------------|:--------------|:--------------------------------------------|
+| pumpid        | character     | ID number of the water pump                 |
+| description   | character     | Name of the pump location                   |
+| x_arc1960     | double        | Easting in metres, Arc 1960 / UTM zone 37S  |
+| y_arc1960     | double        | Northing in metres, Arc 1960 / UTM zone 37S |
+| lat_wgs84     | double        | Latitude in WGS 84 coordinate system        |
+| long_wgs84    | double        | Longitude in WGS 84 coordinate system       |
 
 ### `weeklyvol2014` and `weeklyvol2015` data
 
@@ -86,16 +86,68 @@ These two datasets follow the same structure and we here use
 `weeklyvol2014` as an illustration. For an overview of the variable
 names, see the following table.
 
-| variable_name | variable_type | description                                          |
-|:--------------|:--------------|:-----------------------------------------------------|
-| pumpid        | character     | ID number of the water pump                          |
-| n             | double        | Each column indicates the week number 1, 2, 3, …, 52 |
+| variable_name | variable_type | description                               |
+|:--------------|:--------------|:------------------------------------------|
+| pumpid        | character     | ID number of the water pump               |
+| 1             | double        | Volume of water pumped in week 1 of 2014  |
+| 2             | double        | Volume of water pumped in week 2 of 2014  |
+| 3             | double        | Volume of water pumped in week 3 of 2014  |
+| 4             | double        | Volume of water pumped in week 4 of 2014  |
+| 5             | double        | Volume of water pumped in week 5 of 2014  |
+| 6             | double        | Volume of water pumped in week 6 of 2014  |
+| 7             | double        | Volume of water pumped in week 7 of 2014  |
+| 8             | double        | Volume of water pumped in week 8 of 2014  |
+| 9             | double        | Volume of water pumped in week 9 of 2014  |
+| 10            | double        | Volume of water pumped in week 10 of 2014 |
+| 11            | double        | Volume of water pumped in week 11 of 2014 |
+| 12            | double        | Volume of water pumped in week 12 of 2014 |
+| 13            | double        | Volume of water pumped in week 13 of 2014 |
+| 14            | double        | Volume of water pumped in week 14 of 2014 |
+| 15            | double        | Volume of water pumped in week 15 of 2014 |
+| 16            | double        | Volume of water pumped in week 16 of 2014 |
+| 17            | double        | Volume of water pumped in week 17 of 2014 |
+| 18            | double        | Volume of water pumped in week 18 of 2014 |
+| 19            | double        | Volume of water pumped in week 19 of 2014 |
+| 20            | double        | Volume of water pumped in week 20 of 2014 |
+| 21            | double        | Volume of water pumped in week 21 of 2014 |
+| 22            | double        | Volume of water pumped in week 22 of 2014 |
+| 23            | double        | Volume of water pumped in week 23 of 2014 |
+| 24            | double        | Volume of water pumped in week 24 of 2014 |
+| 25            | double        | Volume of water pumped in week 25 of 2014 |
+| 26            | double        | Volume of water pumped in week 26 of 2014 |
+| 27            | double        | Volume of water pumped in week 27 of 2014 |
+| 28            | double        | Volume of water pumped in week 28 of 2014 |
+| 29            | double        | Volume of water pumped in week 29 of 2014 |
+| 30            | double        | Volume of water pumped in week 30 of 2014 |
+| 31            | double        | Volume of water pumped in week 31 of 2014 |
+| 32            | double        | Volume of water pumped in week 32 of 2014 |
+| 33            | double        | Volume of water pumped in week 33 of 2014 |
+| 34            | double        | Volume of water pumped in week 34 of 2014 |
+| 35            | double        | Volume of water pumped in week 35 of 2014 |
+| 36            | double        | Volume of water pumped in week 36 of 2014 |
+| 37            | double        | Volume of water pumped in week 37 of 2014 |
+| 38            | double        | Volume of water pumped in week 38 of 2014 |
+| 39            | double        | Volume of water pumped in week 39 of 2014 |
+| 40            | double        | Volume of water pumped in week 40 of 2014 |
+| 41            | double        | Volume of water pumped in week 41 of 2014 |
+| 42            | double        | Volume of water pumped in week 42 of 2014 |
+| 43            | double        | Volume of water pumped in week 43 of 2014 |
+| 44            | double        | Volume of water pumped in week 44 of 2014 |
+| 45            | double        | Volume of water pumped in week 45 of 2014 |
+| 46            | double        | Volume of water pumped in week 46 of 2014 |
+| 47            | double        | Volume of water pumped in week 47 of 2014 |
+| 48            | double        | Volume of water pumped in week 48 of 2014 |
+| 49            | double        | Volume of water pumped in week 49 of 2014 |
+| 50            | double        | Volume of water pumped in week 50 of 2014 |
+| 51            | double        | Volume of water pumped in week 51 of 2014 |
+| 52            | double        | Volume of water pumped in week 52 of 2014 |
 
 ## Example
 
 We can have a look where the hand pumps locate in Kwale using the
 dataset `location`. For more data exploration, you may check out [a
-detailed example here]().
+detailed example
+here](https://openwashdata.github.io/waterpumpkwale/articles/examples.html).
 
 ``` r
 library(leaflet)
@@ -139,19 +191,22 @@ the following information to give credits for authors of the dataset!
 citation("waterpumpkwale")
 #> To cite package 'waterpumpkwale' in publications use:
 #> 
-#>   Thomson P, Hope R, Foster T, Zhong M (2023). "waterpumpkwale: Weekly
-#>   volume of water pumped for handpumps monitored with Smart Handpump
-#>   technology, Kwale County, Kenya." doi:10.5281/zenodo.8399887
-#>   <https://doi.org/10.5281/zenodo.8399887>.
+#>   Thomson P, Hope R, Foster T, Zhong M, Schöbitz L (2023).
+#>   "waterpumpkwale: Weekly Handpump Water Volumes, Kwale County, Kenya
+#>   2014-2015." doi:10.5281/zenodo.8399886
+#>   <https://doi.org/10.5281/zenodo.8399886>.
+#>   <https://github.com/openwashdata/waterpumpkwale>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Misc{thomson_etall:2023,
-#>     title = {waterpumpkwale: Weekly volume of water pumped for handpumps monitored with Smart Handpump technology, Kwale County, Kenya},
-#>     author = {Patrick Thomson and Rob Hope and Tim Foster and Mian Zhong},
+#>     title = {waterpumpkwale: Weekly Handpump Water Volumes, Kwale County, Kenya 2014-2015},
+#>     author = {Patrick Thomson and Rob Hope and Tim Foster and Mian Zhong and Lars Schöbitz},
 #>     year = {2023},
-#>     doi = {10.5281/zenodo.8399887},
-#>     abstract = {A dataset contains a summary of the weekly volumetric output of pumps monitored using Smart Handpump sensors for 2014 and 2015 in Kwale County of Kenya.},
+#>     doi = {10.5281/zenodo.8399886},
+#>     url = {https://github.com/openwashdata/waterpumpkwale},
+#>     abstract = {This dataset contains a summary of the weekly volumetric output of handpumps monitored using Smart Handpump sensors in 2014 and 2015 in Kwale County, Kenya, together with the locations of the monitored pumps.},
+#>     keywords = {open data,washdata,handpumps,water supply,groundwater,smart handpump,kwale,kenya,africa,open-data,open-datasets,r,underground-water,upgro,water-pump},
 #>     version = {0.0.1},
 #>   }
 ```
