@@ -1,11 +1,113 @@
 directory,file_name,variable_name,variable_type,description
 data/,weeklyvol2014.rda,pumpid,character,ID number of the water pump
-data/,weeklyvol2014.rda,n,double,"Each column indicates the week number 1, 2, 3, ..., 52"
+data/,weeklyvol2014.rda,1,double,Volume of water pumped in week 1 of 2014
+data/,weeklyvol2014.rda,2,double,Volume of water pumped in week 2 of 2014
+data/,weeklyvol2014.rda,3,double,Volume of water pumped in week 3 of 2014
+data/,weeklyvol2014.rda,4,double,Volume of water pumped in week 4 of 2014
+data/,weeklyvol2014.rda,5,double,Volume of water pumped in week 5 of 2014
+data/,weeklyvol2014.rda,6,double,Volume of water pumped in week 6 of 2014
+data/,weeklyvol2014.rda,7,double,Volume of water pumped in week 7 of 2014
+data/,weeklyvol2014.rda,8,double,Volume of water pumped in week 8 of 2014
+data/,weeklyvol2014.rda,9,double,Volume of water pumped in week 9 of 2014
+data/,weeklyvol2014.rda,10,double,Volume of water pumped in week 10 of 2014
+data/,weeklyvol2014.rda,11,double,Volume of water pumped in week 11 of 2014
+data/,weeklyvol2014.rda,12,double,Volume of water pumped in week 12 of 2014
+data/,weeklyvol2014.rda,13,double,Volume of water pumped in week 13 of 2014
+data/,weeklyvol2014.rda,14,double,Volume of water pumped in week 14 of 2014
+data/,weeklyvol2014.rda,15,double,Volume of water pumped in week 15 of 2014
+data/,weeklyvol2014.rda,16,double,Volume of water pumped in week 16 of 2014
+data/,weeklyvol2014.rda,17,double,Volume of water pumped in week 17 of 2014
+data/,weeklyvol2014.rda,18,double,Volume of water pumped in week 18 of 2014
+data/,weeklyvol2014.rda,19,double,Volume of water pumped in week 19 of 2014
+data/,weeklyvol2014.rda,20,double,Volume of water pumped in week 20 of 2014
+data/,weeklyvol2014.rda,21,double,Volume of water pumped in week 21 of 2014
+data/,weeklyvol2014.rda,22,double,Volume of water pumped in week 22 of 2014
+data/,weeklyvol2014.rda,23,double,Volume of water pumped in week 23 of 2014
+data/,weeklyvol2014.rda,24,double,Volume of water pumped in week 24 of 2014
+data/,weeklyvol2014.rda,25,double,Volume of water pumped in week 25 of 2014
+data/,weeklyvol2014.rda,26,double,Volume of water pumped in week 26 of 2014
+data/,weeklyvol2014.rda,27,double,Volume of water pumped in week 27 of 2014
+data/,weeklyvol2014.rda,28,double,Volume of water pumped in week 28 of 2014
+data/,weeklyvol2014.rda,29,double,Volume of water pumped in week 29 of 2014
+data/,weeklyvol2014.rda,30,double,Volume of water pumped in week 30 of 2014
+data/,weeklyvol2014.rda,31,double,Volume of water pumped in week 31 of 2014
+data/,weeklyvol2014.rda,32,double,Volume of water pumped in week 32 of 2014
+data/,weeklyvol2014.rda,33,double,Volume of water pumped in week 33 of 2014
+data/,weeklyvol2014.rda,34,double,Volume of water pumped in week 34 of 2014
+data/,weeklyvol2014.rda,35,double,Volume of water pumped in week 35 of 2014
+data/,weeklyvol2014.rda,36,double,Volume of water pumped in week 36 of 2014
+data/,weeklyvol2014.rda,37,double,Volume of water pumped in week 37 of 2014
+data/,weeklyvol2014.rda,38,double,Volume of water pumped in week 38 of 2014
+data/,weeklyvol2014.rda,39,double,Volume of water pumped in week 39 of 2014
+data/,weeklyvol2014.rda,40,double,Volume of water pumped in week 40 of 2014
+data/,weeklyvol2014.rda,41,double,Volume of water pumped in week 41 of 2014
+data/,weeklyvol2014.rda,42,double,Volume of water pumped in week 42 of 2014
+data/,weeklyvol2014.rda,43,double,Volume of water pumped in week 43 of 2014
+data/,weeklyvol2014.rda,44,double,Volume of water pumped in week 44 of 2014
+data/,weeklyvol2014.rda,45,double,Volume of water pumped in week 45 of 2014
+data/,weeklyvol2014.rda,46,double,Volume of water pumped in week 46 of 2014
+data/,weeklyvol2014.rda,47,double,Volume of water pumped in week 47 of 2014
+data/,weeklyvol2014.rda,48,double,Volume of water pumped in week 48 of 2014
+data/,weeklyvol2014.rda,49,double,Volume of water pumped in week 49 of 2014
+data/,weeklyvol2014.rda,50,double,Volume of water pumped in week 50 of 2014
+data/,weeklyvol2014.rda,51,double,Volume of water pumped in week 51 of 2014
+data/,weeklyvol2014.rda,52,double,Volume of water pumped in week 52 of 2014
 data/,weeklyvol2015.rda,pumpid,character,ID number of the water pump
-data/,weeklyvol2015.rda,n,double,"Each column indicates the week number 1, 2, 3, ..., 52"
+data/,weeklyvol2015.rda,1,double,Volume of water pumped in week 1 of 2015
+data/,weeklyvol2015.rda,2,double,Volume of water pumped in week 2 of 2015
+data/,weeklyvol2015.rda,3,double,Volume of water pumped in week 3 of 2015
+data/,weeklyvol2015.rda,4,double,Volume of water pumped in week 4 of 2015
+data/,weeklyvol2015.rda,5,double,Volume of water pumped in week 5 of 2015
+data/,weeklyvol2015.rda,6,double,Volume of water pumped in week 6 of 2015
+data/,weeklyvol2015.rda,7,double,Volume of water pumped in week 7 of 2015
+data/,weeklyvol2015.rda,8,double,Volume of water pumped in week 8 of 2015
+data/,weeklyvol2015.rda,9,double,Volume of water pumped in week 9 of 2015
+data/,weeklyvol2015.rda,10,double,Volume of water pumped in week 10 of 2015
+data/,weeklyvol2015.rda,11,double,Volume of water pumped in week 11 of 2015
+data/,weeklyvol2015.rda,12,double,Volume of water pumped in week 12 of 2015
+data/,weeklyvol2015.rda,13,double,Volume of water pumped in week 13 of 2015
+data/,weeklyvol2015.rda,14,double,Volume of water pumped in week 14 of 2015
+data/,weeklyvol2015.rda,15,double,Volume of water pumped in week 15 of 2015
+data/,weeklyvol2015.rda,16,double,Volume of water pumped in week 16 of 2015
+data/,weeklyvol2015.rda,17,double,Volume of water pumped in week 17 of 2015
+data/,weeklyvol2015.rda,18,double,Volume of water pumped in week 18 of 2015
+data/,weeklyvol2015.rda,19,double,Volume of water pumped in week 19 of 2015
+data/,weeklyvol2015.rda,20,double,Volume of water pumped in week 20 of 2015
+data/,weeklyvol2015.rda,21,double,Volume of water pumped in week 21 of 2015
+data/,weeklyvol2015.rda,22,double,Volume of water pumped in week 22 of 2015
+data/,weeklyvol2015.rda,23,double,Volume of water pumped in week 23 of 2015
+data/,weeklyvol2015.rda,24,double,Volume of water pumped in week 24 of 2015
+data/,weeklyvol2015.rda,25,double,Volume of water pumped in week 25 of 2015
+data/,weeklyvol2015.rda,26,double,Volume of water pumped in week 26 of 2015
+data/,weeklyvol2015.rda,27,double,Volume of water pumped in week 27 of 2015
+data/,weeklyvol2015.rda,28,double,Volume of water pumped in week 28 of 2015
+data/,weeklyvol2015.rda,29,double,Volume of water pumped in week 29 of 2015
+data/,weeklyvol2015.rda,30,double,Volume of water pumped in week 30 of 2015
+data/,weeklyvol2015.rda,31,double,Volume of water pumped in week 31 of 2015
+data/,weeklyvol2015.rda,32,double,Volume of water pumped in week 32 of 2015
+data/,weeklyvol2015.rda,33,double,Volume of water pumped in week 33 of 2015
+data/,weeklyvol2015.rda,34,double,Volume of water pumped in week 34 of 2015
+data/,weeklyvol2015.rda,35,double,Volume of water pumped in week 35 of 2015
+data/,weeklyvol2015.rda,36,double,Volume of water pumped in week 36 of 2015
+data/,weeklyvol2015.rda,37,double,Volume of water pumped in week 37 of 2015
+data/,weeklyvol2015.rda,38,double,Volume of water pumped in week 38 of 2015
+data/,weeklyvol2015.rda,39,double,Volume of water pumped in week 39 of 2015
+data/,weeklyvol2015.rda,40,double,Volume of water pumped in week 40 of 2015
+data/,weeklyvol2015.rda,41,double,Volume of water pumped in week 41 of 2015
+data/,weeklyvol2015.rda,42,double,Volume of water pumped in week 42 of 2015
+data/,weeklyvol2015.rda,43,double,Volume of water pumped in week 43 of 2015
+data/,weeklyvol2015.rda,44,double,Volume of water pumped in week 44 of 2015
+data/,weeklyvol2015.rda,45,double,Volume of water pumped in week 45 of 2015
+data/,weeklyvol2015.rda,46,double,Volume of water pumped in week 46 of 2015
+data/,weeklyvol2015.rda,47,double,Volume of water pumped in week 47 of 2015
+data/,weeklyvol2015.rda,48,double,Volume of water pumped in week 48 of 2015
+data/,weeklyvol2015.rda,49,double,Volume of water pumped in week 49 of 2015
+data/,weeklyvol2015.rda,50,double,Volume of water pumped in week 50 of 2015
+data/,weeklyvol2015.rda,51,double,Volume of water pumped in week 51 of 2015
+data/,weeklyvol2015.rda,52,double,Volume of water pumped in week 52 of 2015
 data/,location.rda,pumpid,character,ID number of the water pump
 data/,location.rda,description,character,Name of the pump location
-data/,location.rda,x_arc1960,double,Longitude in Arc 1960 coordinate system
-data/,location.rda,y_rc1960,double,Latitude in Arc 1960 coordinate system
+data/,location.rda,x_arc1960,double,"Easting in metres, Arc 1960 / UTM zone 37S"
+data/,location.rda,y_arc1960,double,"Northing in metres, Arc 1960 / UTM zone 37S"
 data/,location.rda,lat_wgs84,double,Latitude in WGS 84 coordinate system
 data/,location.rda,long_wgs84,double,Longitude in WGS 84 coordinate system
