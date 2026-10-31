@@ -11,6 +11,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8399886.svg)](https://zenodo.org/doi/10.5281/zenodo.8399886)
 <!-- badges: end -->
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of `waterpumpkwale` is to provide datasets for monitoring
 weekly volume of hand pumps in Kwale, Kenya. This package contains
 valuable information of geo-locations of hand pumps in Kwale as well as
