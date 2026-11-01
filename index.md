@@ -1,7 +1,5 @@
 # waterpumpkwale
 
-A data package published by [openwashdata](https://openwashdata.org).
-
 The goal of `waterpumpkwale` is to provide datasets for monitoring
 weekly volume of hand pumps in Kwale, Kenya. This package contains
 valuable information of geo-locations of hand pumps in Kwale as well as
@@ -175,6 +173,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/waterpumpkwale/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 If you use the data or the package, consider to cite this package with
 the following information to give credits for authors of the dataset!
